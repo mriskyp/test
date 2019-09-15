@@ -7,7 +7,6 @@ import (
 	"os"
 	"strconv"
 	"strings"
-	"text/tabwriter"
 )
 
 const (
@@ -182,20 +181,11 @@ func CreateSlice(size int) []*Vehicle {
 // GetParkingStatus func to get information parking lot
 func GetParkingStatus(stackList []*Vehicle) {
 
-	// initialize tabwriter
-	w := new(tabwriter.Writer)
-
-	// minwidth, tabwidth, padding, padchar, flags
-	w.Init(os.Stdout, 2, 8, 0, '\t', 0)
-
-	defer w.Flush()
-
-	// template header
-	fmt.Fprintf(w, "%s\t%s\t%s\t \n", "Slot No.", "Registration No", "Colour")
+	fmt.Println("Slot No.    Registration No    Colour")
 
 	for _, v := range stackList {
 		if v != nil {
-			fmt.Fprintf(w, " %d\t%s\t%s\t \n", v.ID, v.VehicleID, v.Color)
+			fmt.Printf("%d           %s      %s\n", v.ID, v.VehicleID, v.Color)
 		}
 	}
 }
