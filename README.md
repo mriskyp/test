@@ -12,8 +12,8 @@ In the first when clone the repo, you need to `dep ensure -v` first just in case
 
 <!-- run -->
 There are some option to run the code:
--You have to manually `go build` and then run `go run main.go`
--run the file by doing `go run main.go` or run by script bin/parking_lot and there will be STDOUT from println
+-You have to manually `go build` and then run `go run main.go file_input.txt`
+-run the file by doing `go run main.go file_input.txt` or run by script bin/parking_lot and there will be STDOUT from println
 
 <!-- run test case -->
 To run test case, you have to run `go test -v` which will run all the test case in the repo.

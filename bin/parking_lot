@@ -7,9 +7,7 @@
 # This variable contains absolute path of this `parking_lot` script
 #Golang
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
-#  go run main.go
-
-
+go run main.go file_input.txt
 
 # Use DIR variable above to pinpoint your jar/executable/main class
 # e.g.

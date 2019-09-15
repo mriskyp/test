@@ -46,7 +46,12 @@ type Vehicle struct {
 
 func main() {
 
-	inputFile, err := ioutil.ReadFile("functional_spec/fixtures/file_input.txt") // just pass the file name
+	// get file text from arg command line
+	var args = os.Args[1:]
+
+	// set command args
+	cmd := fmt.Sprintf("%s/%s", "functional_spec/fixtures", args[0])
+	inputFile, err := ioutil.ReadFile(cmd) // just pass the file name
 	if err != nil {
 		fmt.Print(err, " \n")
 	}
