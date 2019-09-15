@@ -23,3 +23,9 @@ for example:
     TestLeaveWithoutError return error
     to test only the test case, just fix the code and click the func. Then there will be single run unit test
 
+
+Project Requirements:
+
+-Docker
+-Golang
+-Git

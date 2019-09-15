@@ -46,11 +46,6 @@ type Vehicle struct {
 
 func main() {
 
-	// global variable to parking lot
-	var parkingLot []*Vehicle
-	// parkingLotAllocation size of created parkingLot and to compare when park command to append parking lot
-	var parkingLotAllocation int
-
 	inputFile, err := ioutil.ReadFile("functional_spec/fixtures/file_input.txt") // just pass the file name
 	if err != nil {
 		fmt.Print(err, " \n")
@@ -61,6 +56,17 @@ func main() {
 
 	// declare stringifyInput as array of string command input
 	inputCommand := SplitString(stringifyInput, StringNewLine)
+
+	ProcessInput(inputCommand)
+
+}
+
+// ProcessInput func to process all command
+func ProcessInput(inputCommand []string) {
+	// global variable to parking lot
+	var parkingLot []*Vehicle
+	// parkingLotAllocation size of created parkingLot and to compare when park command to append parking lot
+	var parkingLotAllocation int
 
 	for _, v := range inputCommand {
 
